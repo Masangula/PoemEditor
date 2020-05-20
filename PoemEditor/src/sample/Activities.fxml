@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="generalPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="918.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Activities">
+   <children>
+      <VBox fx:id="dashboard" layoutY="-2.0" prefHeight="475.0" prefWidth="204.0" style="-fx-background-color: #3F2B63 Swatch 3;">
+         <children>
+            <Button fx:id="newPoemButton" mnemonicParsing="false" onAction="#handleClicks" prefHeight="67.0" prefWidth="200.0" style="-fx-background-color: #3F2B63 Swatch 3;" text="New Poem" textFill="WHITE">
+               <font>
+                  <Font name="Segoe Script" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="readButton" defaultButton="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="67.0" prefWidth="200.0" style="-fx-background-color: #3F2B63 Swatch 3;" text="Read Poem" textFill="WHITE">
+               <font>
+                  <Font name="Segoe Script" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="deleteButton" layoutX="10.0" layoutY="77.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="67.0" prefWidth="200.0" style="-fx-background-color: #3F2B63 Swatch 3;" text="Delete Poem" textFill="WHITE">
+               <font>
+                  <Font name="Segoe Script" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="uploadButton" layoutX="10.0" layoutY="145.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="67.0" prefWidth="200.0" style="-fx-background-color: #3F2B63 Swatch 3;" text="Upload Poem" textFill="WHITE">
+               <font>
+                  <Font name="Segoe Script" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="logoutButton" layoutX="10.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="67.0" prefWidth="200.0" style="-fx-background-color: #3F2B63 Swatch 3;" text="Personal Information" textFill="WHITE">
+               <font>
+                  <Font name="Segoe Script" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+      <Pane fx:id="titlePane" layoutX="204.0" layoutY="46.0" prefHeight="67.0" prefWidth="714.0" style="-fx-background-color: #994363;">
+         <children>
+            <Label fx:id="titleLabel" layoutX="23.0" layoutY="14.0" prefHeight="40.0" prefWidth="241.0" text="Details" textFill="#f7f4f4">
+               <font>
+                  <Font name="Segoe Script" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateLabel" alignment="CENTER" layoutX="603.0" layoutY="25.0" prefHeight="22.0" prefWidth="101.0" textFill="#ece8e8">
+               <font>
+                  <Font name="Segoe Script" size="12.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <StackPane layoutX="223.0" layoutY="136.0">
+         <children>
+            <Pane fx:id="pane1" style="-fx-background-color: #ffffff;">
+               <children>
+                  <TextArea fx:id="contentField" prefHeight="323.0" prefWidth="445.0" promptText="Start writting">
+                     <font>
+                        <Font name="Ink Free" size="14.0" />
+                     </font>
+                  </TextArea>
+                  <Button fx:id="libraryButton" layoutX="460.0" layoutY="33.0" mnemonicParsing="false" onAction="#viewWordLibrary" prefHeight="51.0" prefWidth="225.0" style="-fx-background-color: #7156DD;" text="Word Library" textFill="WHITE">
+                     <font>
+                        <Font name="Ink Free" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="saveButton" layoutX="460.0" layoutY="248.0" mnemonicParsing="false" onAction="#savePoem" prefHeight="51.0" prefWidth="225.0" style="-fx-background-color: #7156DD;" text="Save Poem" textFill="WHITE">
+                     <font>
+                        <Font name="Ink Free" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="poemNameField" layoutX="460.0" layoutY="118.0" prefHeight="36.0" prefWidth="225.0" promptText="Poem Name">
+                     <font>
+                        <Font name="Ink Free" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="writerField" layoutX="460.0" layoutY="183.0" prefHeight="36.0" prefWidth="225.0" promptText="Writer's Name">
+                     <font>
+                        <Font name="Ink Free" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <Pane fx:id="pane2">
+               <children>
+                  <TableView fx:id="table1" layoutY="44.0" prefHeight="279.0" prefWidth="685.0">
+                    <columns>
+                      <TableColumn fx:id="number" prefWidth="29.333343505859375" style="-fx-background-color: #436399;" text="No" />
+                      <TableColumn fx:id="poemName" prefWidth="257.6666564941406" style="-fx-background-color: #436399;" text="Poem Name" />
+                        <TableColumn fx:id="writer" prefWidth="149.66668701171875" style="-fx-background-color: #436399;" text="Writer" />
+                        <TableColumn fx:id="date" prefWidth="248.00006103515625" style="-fx-background-color: #436399;" text="Last Edited" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="readTextField" prefHeight="43.0" prefWidth="445.0" promptText="Poem 's name you want to read">
+                     <font>
+                        <Font name="Ink Free" size="14.0" />
+                     </font></TextField>
+                  <Button fx:id="goReadButton" layoutX="445.0" mnemonicParsing="false" onAction="#readingProcess" prefHeight="43.0" prefWidth="241.0" style="-fx-background-color: #436399;" text="Read" textFill="WHITE">
+                     <font>
+                        <Font name="Ink Free" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="pane3" layoutX="10.0" layoutY="10.0">
+               <children>
+                  <TableView fx:id="table2" layoutY="44.0" prefHeight="279.0" prefWidth="685.0">
+                     <columns>
+                        <TableColumn fx:id="number1" prefWidth="29.333343505859375" style="-fx-background-color: #439963;" text="No" />
+                        <TableColumn fx:id="poemName1" prefWidth="257.6666564941406" style="-fx-background-color: #439963;" text="Poem Name" />
+                        <TableColumn fx:id="writer1" prefWidth="149.66668701171875" style="-fx-background-color: #439963;" text="Writer" />
+                        <TableColumn fx:id="date1" prefWidth="248.00006103515625" style="-fx-background-color: #439963;" text="Last Edited" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="poemToBeDeletedField" prefHeight="43.0" prefWidth="445.0" promptText="Poem 's name you want to delete">
+                     <font>
+                        <Font name="Ink Free" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="deletingButton" layoutX="445.0" mnemonicParsing="false" onAction="#deletingPoem" prefHeight="43.0" prefWidth="241.0" style="-fx-background-color: #439963;" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font name="Ink Free" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="pane4" layoutX="10.0" layoutY="10.0">
+               <children>
+                  <TableView fx:id="table3" layoutY="44.0" prefHeight="279.0" prefWidth="685.0">
+                     <columns>
+                        <TableColumn fx:id="number2" prefWidth="29.333343505859375" style="-fx-background-color: #996343;" text="No" />
+                        <TableColumn fx:id="poemName2" prefWidth="257.6666564941406" style="-fx-background-color: #996343;" text="Poem Name" />
+                        <TableColumn fx:id="writer2" prefWidth="149.66668701171875" style="-fx-background-color: #996343;" text="Writer" />
+                        <TableColumn fx:id="date2" prefWidth="248.00006103515625" style="-fx-background-color: #996343;" text="Last Edited" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="fileToBeUploadedField" prefHeight="43.0" prefWidth="445.0" promptText="Poem 's name you want to upload">
+                     <font>
+                        <Font name="Ink Free" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="uploadingButton" layoutX="445.0" mnemonicParsing="false" onAction="#uploadingPoem" prefHeight="43.0" prefWidth="241.0" style="-fx-background-color: #996343;" text="Upload" textFill="WHITE">
+                     <font>
+                        <Font name="Ink Free" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="pane5" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #994363;">
+               <children>
+                  <Label layoutX="212.0" layoutY="43.0" prefHeight="36.0" prefWidth="66.0" text="Username:" textFill="WHITE">
+                     <font>
+                        <Font name="Ink Free" size="14.0" />
+                     </font></Label>
+                  <TextField fx:id="viewUserNameField" editable="false" layoutX="286.0" layoutY="43.0" prefHeight="36.0" prefWidth="204.0" promptText="Change your username/writer's name">
+                     <font>
+                        <Font name="Segoe Script" size="12.0" />
+                     </font></TextField>
+                  <Label layoutX="220.0" layoutY="90.0" prefHeight="36.0" prefWidth="58.0" text="Email:" textFill="WHITE">
+                     <font>
+                        <Font name="Ink Free" size="14.0" />
+                     </font></Label>
+                  <TextField fx:id="viewEmailField" editable="false" layoutX="286.0" layoutY="90.0" prefHeight="36.0" prefWidth="204.0" promptText="change your email">
+                     <font>
+                        <Font name="Segoe Script" size="12.0" />
+                     </font></TextField>
+                  <Label layoutX="212.0" layoutY="136.0" prefHeight="36.0" prefWidth="66.0" text="Password:" textFill="WHITE">
+                     <font>
+                        <Font name="Ink Free" size="14.0" />
+                     </font></Label>
+                  <TextField fx:id="viewPasswordField" editable="false" layoutX="286.0" layoutY="136.0" prefHeight="36.0" prefWidth="204.0" promptText="Type your new password">
+                     <font>
+                        <Font name="Segoe Script" size="12.0" />
+                     </font></TextField>
+                  <Button fx:id="editDetailsButton" layoutX="218.0" layoutY="185.0" mnemonicParsing="false" onAction="#editingDetails" prefHeight="43.0" prefWidth="270.0" style="-fx-background-color: #439963;" text="Edit Details" textFill="WHITE">
+                     <font>
+                        <Font name="Ink Free" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="lgtButton" layoutX="14.0" layoutY="266.0" mnemonicParsing="false" onAction="#loggingOut" prefHeight="43.0" prefWidth="665.0" style="-fx-background-color: #439963;" text="LogOut" textFill="WHITE">
+                     <font>
+                        <Font name="Ink Free" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children></Pane>
+         </children>
+      </StackPane>
+      <Label fx:id="close" layoutX="883.0" layoutY="14.0" onMouseClicked="#closing" text="X">
+         <font>
+            <Font name="Lucida Sans Unicode" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>

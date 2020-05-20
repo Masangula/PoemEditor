@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="456.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Registration">
+   <children>
+      <Label alignment="CENTER" layoutX="37.0" layoutY="21.0" prefHeight="32.0" prefWidth="337.0" text="Enter the following details correctly">
+         <font>
+            <Font name="Segoe Script" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="23.0" layoutY="83.0" prefHeight="26.0" prefWidth="80.0" text="Username:">
+         <font>
+            <Font name="Segoe Script" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userNameField" layoutX="122.0" layoutY="83.0" prefHeight="25.0" prefWidth="226.0" promptText="writer name">
+         <font>
+            <Font name="Segoe Script" size="14.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" layoutX="27.0" layoutY="135.0" prefHeight="26.0" prefWidth="80.0" text="Email:">
+         <font>
+            <Font name="Segoe Script" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailField" layoutX="122.0" layoutY="136.0" prefHeight="36.0" prefWidth="226.0" promptText="example@example.com">
+         <font>
+            <Font name="Segoe Script" size="14.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" layoutX="18.0" layoutY="185.0" prefHeight="26.0" prefWidth="80.0" text="Password:">
+         <font>
+            <Font name="Segoe Script" size="14.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordField" layoutX="122.0" layoutY="185.0" prefHeight="36.0" prefWidth="226.0" />
+      <Label alignment="CENTER" layoutX="8.0" layoutY="236.0" prefHeight="26.0" prefWidth="113.0" text="Retype Password:">
+         <font>
+            <Font name="Segoe Script" size="11.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="retypePasswordField" layoutX="122.0" layoutY="236.0" prefHeight="36.0" prefWidth="226.0" />
+      <Button fx:id="registrationButton" layoutX="106.0" layoutY="337.0" mnemonicParsing="false" onAction="#submitRegistration" prefHeight="36.0" prefWidth="180.0" style="-fx-background-color: #439963;" text="Register" textFill="#f7f3f3">
+         <font>
+            <Font name="Segoe Script" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label fx:id="messageLabel" alignment="CENTER" layoutX="26.0" layoutY="287.0" prefHeight="26.0" prefWidth="325.0" textFill="#bf1818">
+         <font>
+            <Font name="Segoe Script" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="backLabel" accessibleRole="BUTTON" alignment="CENTER" layoutX="33.0" layoutY="392.0" onMouseClicked="#backToLoginForm" prefHeight="26.0" prefWidth="325.0" text="Oops! I have an account." textFill="#2a19bd" underline="true">
+         <font>
+            <Font name="Segoe Script" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>

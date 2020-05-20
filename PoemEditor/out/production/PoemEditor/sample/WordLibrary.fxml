@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane fx:id="wordLibraryPane" prefHeight="455.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.WordLibrary">
+   <children>
+      <WebView fx:id="webView" layoutX="44.0" layoutY="27.0" prefHeight="379.0" prefWidth="598.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+      <Button layoutX="95.0" layoutY="387.0" mnemonicParsing="false" onAction="#searchEngine" prefHeight="48.0" prefWidth="130.0" style="-fx-background-color: #439963;" text="Search the word" textFill="#f7f1f1">
+         <font>
+            <Font name="Ink Free" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="234.0" layoutY="387.0" mnemonicParsing="false" onAction="#reloadingEngine" prefHeight="48.0" prefWidth="130.0" style="-fx-background-color: #439963;" text="Reload" textFill="#f7f1f1">
+         <font>
+            <Font name="Ink Free" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="376.0" layoutY="387.0" mnemonicParsing="false" onAction="#viewHistory" prefHeight="48.0" prefWidth="130.0" style="-fx-background-color: #439963;" text="History" textFill="#f7f1f1">
+         <font>
+            <Font name="Ink Free" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="513.0" layoutY="387.0" mnemonicParsing="false" onAction="#closing" prefHeight="48.0" prefWidth="130.0" style="-fx-background-color: #439963;" text="close" textFill="#f7f1f1">
+         <font>
+            <Font name="Ink Free" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

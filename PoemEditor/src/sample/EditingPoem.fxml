@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="EditingPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EditingPoem">
+   <children>
+      <Pane layoutY="21.0" prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #436399;">
+         <children>
+            <Label layoutX="11.0" layoutY="17.0" prefHeight="38.0" prefWidth="137.0" text="Editing Poem">
+               <font>
+                  <Font name="Segoe Script" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextArea fx:id="editingArea" layoutX="17.0" layoutY="103.0" prefHeight="284.0" prefWidth="358.0" promptText="Start editing ...">
+         <font>
+            <Font name="Ink Free" size="14.0" />
+         </font>
+      </TextArea>
+      <TextField fx:id="editedPoemNameField" layoutX="386.0" layoutY="147.0" prefHeight="38.0" prefWidth="200.0" promptText="Poem name">
+         <font>
+            <Font name="Ink Free" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="WriterEditedPoemField" layoutX="386.0" layoutY="217.0" prefHeight="38.0" prefWidth="200.0" promptText="writer's name">
+         <font>
+            <Font name="Ink Free" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="editingButton" layoutX="386.0" layoutY="287.0" mnemonicParsing="false" onAction="#editing" prefHeight="38.0" prefWidth="200.0" style="-fx-background-color: #436399;" text="Save">
+         <font>
+            <Font name="Ink Free" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

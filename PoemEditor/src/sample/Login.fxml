@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="291.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Login">
+   <children>
+      <TextField fx:id="usernameField" layoutX="107.0" layoutY="84.0" prefHeight="36.0" prefWidth="278.0" promptText="Username">
+         <font>
+            <Font name="Ink Free" size="16.0" />
+         </font></TextField>
+      <PasswordField fx:id="passwordField" layoutX="109.0" layoutY="135.0" prefHeight="36.0" prefWidth="278.0" promptText="Password">
+         <font>
+            <Font name="Ink Free" size="16.0" />
+         </font></PasswordField>
+      <Label fx:id="messageLabel" alignment="CENTER" layoutX="107.0" layoutY="53.0" prefHeight="23.0" prefWidth="278.0" textFill="#e81010" />
+      <Button fx:id="loginButton" layoutX="187.0" layoutY="198.0" mnemonicParsing="false" onAction="#loggingIn" prefHeight="36.0" prefWidth="119.0" style="-fx-background-color: #439963;" text="Login" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Ink Free" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="registrationLinkLabel" accessibleRole="BUTTON" alignment="CENTER" layoutX="102.0" layoutY="246.0" onMouseClicked="#registration" prefHeight="23.0" prefWidth="287.0" text="If you don't have an account, register." textFill="#2c2ca2" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Segoe Script" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="close" accessibleRole="BUTTON" layoutX="466.0" layoutY="14.0" onMouseClicked="#closing" prefHeight="23.0" prefWidth="5.0" text="X" textFill="#222223">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>

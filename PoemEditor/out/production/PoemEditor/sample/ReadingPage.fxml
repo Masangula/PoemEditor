@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="readingPane" prefHeight="480.0" prefWidth="411.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ReadingPage">
+   <children>
+      <Button fx:id="VoiceReadingButton" layoutX="13.0" layoutY="432.0" mnemonicParsing="false" onAction="#voice" prefHeight="42.0" prefWidth="124.0" style="-fx-background-color: #439963;" text="Voice Reading" textFill="WHITE">
+         <font>
+            <Font name="Ink Free" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextArea fx:id="ReadingArea" layoutX="13.0" layoutY="11.0" prefHeight="414.0" prefWidth="384.0">
+         <font>
+            <Font name="Lucida Console" size="14.0" />
+         </font></TextArea>
+      <Button fx:id="EditButton" layoutX="143.0" layoutY="432.0" mnemonicParsing="false" onAction="#editingPoem" prefHeight="42.0" prefWidth="124.0" style="-fx-background-color: #439963;" text="Edit" textFill="WHITE">
+         <font>
+            <Font name="Ink Free" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="closeButton" layoutX="273.0" layoutY="432.0" mnemonicParsing="false" onAction="#closing" prefHeight="42.0" prefWidth="124.0" style="-fx-background-color: #439963;" text="Close" textFill="WHITE">
+         <font>
+            <Font name="Ink Free" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
